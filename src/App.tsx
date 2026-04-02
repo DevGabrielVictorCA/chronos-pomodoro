@@ -1,7 +1,8 @@
-import { Heading } from "./components/Heading";
+import { Container } from './components/container'
 
 import "./styles/theme.css"
 import "./styles/global.css"
+import { Heading } from './components/Heading'
 
 // Nome da function sempre em pascal case. Ex: ExemploDeNome
 export function App(){ // Export nomeado diretamente da função
@@ -10,12 +11,28 @@ export function App(){ // Export nomeado diretamente da função
     return(
         // Os elementos devem estar envoltos por apenas um elemento pai
         <> 
-            <Heading attr={123} attr2='String'>Olá Mundo1</Heading> {/* Propriedades e Children*/}
-            {/* <Heading>Olá Mundo2</Heading> 
-            <Heading>Olá Mundo3</Heading>  */}
-            <br />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde saepe numquam laudantium minus sunt maxime ipsum officiis cupiditate maiores explicabo beatae obcaecati dicta libero exercitationem ullam, aperiam repellat provident corporis.</p>
-            <p>Quo deleniti similique consectetur id asperiores doloribus maxime rem magnam! Commodi accusamus architecto magnam deserunt temporibus nobis sit iste nihil molestias! Ipsa ad accusantium laboriosam aperiam aut aliquam, maiores excepturi!</p>
+            {/* <Heading>
+                Olá Mundo1
+                <button>
+                    <TimerIcon />
+                </button>
+            </Heading> Propriedades e Children */}
+
+            <Container>
+                <Heading>Testando o meu componente Heading</Heading>
+            </Container>
+
+            <Container>
+                <Heading>MENU</Heading>
+            </Container>
+
+            <Container>
+                <Heading>FORM</Heading>
+            </Container>
+
+            <Container>
+                <Heading>FOOTER</Heading>
+            </Container>
         </>
     );
 }
