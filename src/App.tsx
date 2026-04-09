@@ -2,11 +2,15 @@ import { Container } from './components/Container'
 import { Heading } from './components/Heading'
 import { Logo } from "./components/Logo";
 import { Menu } from "./components/Menu";
-import { HistoryIcon, HomeIcon, SettingsIcon, SunIcon } from "lucide-react";
+import { HistoryIcon, HomeIcon, PlayCircleIcon, SettingsIcon, SunIcon } from "lucide-react";
 
 import "./styles/theme.css"
 import "./styles/global.css"
 import { CountDown } from './components/CountDown';
+import { Inputs } from './components/Inputs';
+import { Cycles } from './components/Cycles';
+import { Buttons } from './components/Buttons';
+import { Rodape } from './components/Rodape';
 
 // Nome da function sempre em pascal case. Ex: ExemploDeNome
 export function App(){ // Export nomeado diretamente da função
@@ -51,7 +55,33 @@ export function App(){ // Export nomeado diretamente da função
             </Container>
 
             <Container>
-                <Heading>FOOTER</Heading>
+                <form className='form' action="">
+                    <div className="formRow">
+                        <Inputs 
+                            type="text" 
+                            id='input' 
+                            labelTask='Task' 
+                            title='Titulo Task' 
+                            placeholder='Ex.: estudar para a prova'
+                        />
+                    </div>
+
+                    <div className="formRow">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                    <div className="formRow">
+                        <Cycles />
+                    </div>
+
+                    <div className="formRow">
+                        <Buttons icon={<><PlayCircleIcon /></>}/>
+                    </div>
+                </form>
+            </Container>
+
+            <Container>
+                <Rodape />
             </Container>
         </>
     );
