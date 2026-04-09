@@ -1,8 +1,12 @@
-import { Container } from './components/container'
+import { Container } from './components/Container'
+import { Heading } from './components/Heading'
+import { Logo } from "./components/Logo";
+import { Menu } from "./components/Menu";
+import { HistoryIcon, HomeIcon, SettingsIcon, SunIcon } from "lucide-react";
 
 import "./styles/theme.css"
 import "./styles/global.css"
-import { Heading } from './components/Heading'
+import { CountDown } from './components/CountDown';
 
 // Nome da function sempre em pascal case. Ex: ExemploDeNome
 export function App(){ // Export nomeado diretamente da função
@@ -19,15 +23,31 @@ export function App(){ // Export nomeado diretamente da função
             </Heading> Propriedades e Children */}
 
             <Container>
-                <Heading>Testando o meu componente Heading</Heading>
+                <Logo />
             </Container>
 
             <Container>
-                <Heading>MENU</Heading>
+                <Menu>
+                    <a href="#">
+                        <HomeIcon />
+                    </a>
+
+                    <a href="#">
+                        <HistoryIcon />
+                    </a>
+
+                    <a href="#">
+                        <SettingsIcon />                    
+                    </a>
+
+                    <a href="#">
+                        <SunIcon />
+                    </a>
+                </Menu>
             </Container>
 
             <Container>
-                <Heading>FORM</Heading>
+                <CountDown />
             </Container>
 
             <Container>
